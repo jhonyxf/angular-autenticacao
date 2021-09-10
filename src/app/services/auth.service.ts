@@ -28,7 +28,7 @@ export class AuthService {
 
   login(username: string, password: string) {
     return this.http
-      .post<any>(`${environment.apiUrl}/api/login`, { username, password })
+      .post<any>(`${environment.apiUrl}api/login`, { username, password })
       .pipe(
         map(({token}) => {
           let user: User = {
